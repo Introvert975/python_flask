@@ -16,7 +16,7 @@ def form():
             b = float(request.form.get('b'))
             c = float(request.form.get('c'))
             D = b*b - (4*a*c)
-            strD = f"D = {b}²-4*{a}*{c}"
+            strD = f"D = {b}²-4·{a}·{c}"
             x1 = (-b + D ** 0.5) / (2*a)
             x2 = (-b - D ** 0.5) / (2 * a)
             if D < 0:
@@ -29,7 +29,7 @@ def form():
                 x2 = round(x2, 5)
                 D = D ** 0.5
                 D = round(D, 5)
-        return render_template('Discriminant.html', ansD=f"√D={D}", x1=f"x₁={x1}", x2=f"x₂={x2}",STRD=strD)
+        return render_template('Discriminant.html', ansD=f"√D={D}", x1=f"x₁={x1}", x2=f"x₂={x2}",STRD=strD, b=f"-({b})±{D}", a=f"2·{a}", X="x₁₂=")
     except:
         strr = "Введите корректные значения(2, 20, 3.53,...)"
         return render_template('Discriminant.html', STR=strr)
