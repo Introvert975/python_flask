@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/main.css') }} ">
+    <title>Dискриминант</title>
+</head>
+<body class="body">
+<div id="title">&radic;Dискриминант</div>
+<div id="main">
+    <form action="" method="POST">
+        <h1>Решение квадратный уравнений</h1>
+        <input type="text" placeholder="a..." name="a">
+        <input type="text" placeholder="b..." name="b">
+        <input type="text" placeholder="c..." name="c">
+        <input id="but" type="submit">
+    </form>
+     <h1 style="top: 8vh;">{{STRD}}</h1>
+    <h1 style="top: 8vh;">{{ansD}}</h1>
+
+
+    <h1 style="top: 8vh;">{{x1}}</h1>
+    <h1 style="top: 8vh;">{{x2}}</h1>
+     <h1 style="top: 8vh;">{{STR}}</h1>
+
+</div>
+</body>
+</html>
